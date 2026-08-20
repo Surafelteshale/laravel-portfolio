@@ -52,6 +52,11 @@ class HeroController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'title' => ['required', 'max:255'],
+            'sub_title' => ['required', 'max:500'],
+        ]);
+
         dd($request->all());
     }
 
