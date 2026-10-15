@@ -5,6 +5,15 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use Illuminate\Support\Facades\Route;
 
+// Fallback for the PHPFlasher core asset when the web server cannot read the
+// generated public copy (the package installer still publishes the other assets).
+Route::get('/vendor/flasher/flasher.min.js', static function () {
+    return response()->file(
+        base_path('vendor/php-flasher/flasher/Resources/public/flasher.min.js'),
+        ['Content-Type' => 'application/javascript']
+    );
+});
+
 Route::get('/', function () {
     return view('frontend.home');
 });

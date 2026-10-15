@@ -36,6 +36,8 @@
 	<script src="{{ asset('frontend/assets/js/jquery-plugin-collection.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/vendor/modernizr.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+    <script src="{{ asset('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js') }}"></script>
 </body>
 
 </html>
